@@ -10,9 +10,9 @@ object firstApp{
     println("reading csv file")
 
     val path = "src/main/resources/titanic.csv"
-    val data = sparkSession.read.option("header","true").format("csv").load(path)
+    val data = sparkSession.read.option("header","true").format("csv").load(path) // data frame
     println("number of lines: ")
     println(data.count)
-    data.show()
+    data.show() // display my dataframe
   }
 }
